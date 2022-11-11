@@ -1,0 +1,20 @@
+h1{
+    color: brown;
+    font-size: 26px;
+    font-family: "Times New Roman";
+    font-weight:bold;
+    text-align: ;/*left right center justifyI*/
+    text-decoration: none;/*underline line through overline*/
+    text-transform: none ;/*uppercase lowercase capitalize*/
+    font-style: italic;
+    line-height: 1.5;
+    background-color:;
+    width: ;
+}
+p{
+   /* color: rgb(0,199, 190);/
+
+    color: #adda80
+
+
+}
