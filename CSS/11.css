@@ -2,14 +2,14 @@ body{
     margin: 90px;
 }
 h1{
-    color: #e86868;
+    color:#FFD154;
     text-decoration: underline;
     text-transform: capitalize;
 }
 hr{
     height:6px;
     width:100%;
-    background-color: #e86868;
+    background-color: #FF9240;
 }
 ul{
     width: 300px;
@@ -21,7 +21,16 @@ li{
     text-align: right;
     line-height: 1.5;
 }
+
 p{
     text-align: left;
+}
+h6{
+    font-size:20px ;
+    text-align: left;
+    line-height: 1.5;
+}
+h3{
+    color: rgb(255, 64, 172);
 }
 
