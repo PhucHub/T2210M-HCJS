@@ -1,12 +1,27 @@
+body{
+    margin: 90px;
+}
 h1{
-    width 50px;
-    margin-left: 170px;
+    color: #e86868;
+    text-decoration: underline;
+    text-transform: capitalize;
+}
+hr{
+    height:6px;
+    width:100%;
+    background-color: #e86868;
+}
+ul{
+    width: 300px;
+    float: right;
+    list-style: none;
+}
+li{
+    font-size:18px ;
+    text-align: right;
+    line-height: 1.5;
 }
 p{
-    white-space: pre-line;
-   font-size: 12px;
-    text-align: center;
-    margin-top: -130px;
-
+    text-align: left;
 }
 
