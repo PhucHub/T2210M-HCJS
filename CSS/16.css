@@ -1,0 +1,32 @@
+img{
+    max-width: 90%;
+}
+div {
+    width: 25% ;
+    float: left;
+    margin: 10px 10px 10px 10px;
+}
+body{
+    margin: 70px;
+     float: left;
+    width: 1080px;
+}
+p{
+    font-size: 13px;
+}
+div{
+    padding: 35px;
+    background-color: rgba(128, 128, 128, 0.76);
+    border-radius: 6px;
+    box-shadow: 5px 5px 8px rgba(128, 128, 128, 0.76);
+
+
+}
+h3{
+    color: #FFD154;
+}
+div:hover{
+    transform: scale(1.2);
+    transition: all 350ms;
+    background-color: gray;
+}
