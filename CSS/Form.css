@@ -1,0 +1,6 @@
+input[name=fullname]{
+    background-color: #FFD154;
+}
+input[name=email]{
+    background-color: aqua;
+}
