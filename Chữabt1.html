@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT1</title>
+  <link rel="stylesheet" href="Lib/bootstrap5.2.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="CSS/Weather2.css">
+</head>
+<body>
+<nav>
+    <div class="container">
+        <button type="button" class="btn btn-outline-light" onclick="forecast('hanoi')">Hà Nội</button>
+        <button type="button" class="btn btn-outline-light" onclick="forecast('saigon')">Sài Gòn</button>
+        <button type="button" class="btn btn-outline-light" onclick="forecast('haiphong')">Hải Phòng</button>
+        <button type="button" class="btn btn-outline-light" onclick="forecast('london')">London</button>
+        <button type="button" class="btn btn-outline-light" onclick="forecast('osaka')">Osaka</button>
+        <button type="button" class="btn btn-outline-light" onclick="forecast('washington')">Washington</button>
+        <button type="button" class="btn btn-outline-light" onclick="forecast('berlin')">Berlin</button>
+    </div>
+</nav>
+<section>
+    <div class="container">
+        <div class="row" id="forecast">
+            <div class="col-3 mb-2 mt-2">
+                <div class="weather card">
+                    <div class="card-body">
+                        <h4>2022-12-05</h4>
+                        <h2>15<sup>o</sup>C</h2>
+                        <p>Broken clouds</p>
+                        <img src="http://openweathermap.org/img/wn/04n@2x.png"/>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<script type="text/javascript">
+    function forecast(ct){
+        var xhttp = new XMLHttpRequest();
+        xhttp.onload = function (){
+            var data = JSON.parse(this.responseText);
+            var ls = data.list;
+            var fc = document.getElementById("forecast");
+            fc.innerHTML = '';
+            for(var i=0;i<ls.length;i++){
+                var pt = `<div class="col-3 mb-2 mt-2">
+                    <div class="weather card">
+                        <div class="card-body">
+                            <h4>${ls[i].dt_txt}</h4>
+                            <h2>${ls[i].main.temp}<sup>o</sup>C</h2>
+                            <p>${ls[i].weather[0].description}</p>
+                              <img src="http://openweathermap.org/img/wn/${ls[i].weather[0].icon}@2x.png"/>
+                        </div>
+                    </div>
+                </div>`;
+
+                fc.innerHTML += pt;
+            }
+        }
+        xhttp.open("GET",`http://api.openweathermap.org/data/2.5/forecast?q=${ct}&appid=09a71427c59d38d6a34f89b47d75975c&units=metric`);
+        xhttp.send();
+    }
+    forecast("hanoi");
+</script>
+</body>
+</html>

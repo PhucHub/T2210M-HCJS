@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript2</title>
+</head>
+<body>
+<h1 id="X.name">Tên một người</h1>
+
+<ul id="Thực đơn">
+
+</ul>
+<script type="text/javascript">
+  var menu =[
+    "Phở bò",
+    "Phở gà",
+    "Trứng",
+    "Xôi xéo"
+  ]
+  var td =document.getElementById("Thực đơn");
+  for ( var i=0;i<menu.length;i++){
+    var pt ="<li> ${menu[i]} </li>"
+    td.innerHTML +=pt
+  }
+ var obj1= {
+      name:"Lê Anh Thư",
+      age:18,
+      address:"Hà Nội",
+      gender:"Nữ"
+ }
+ console.log(obj1.name);
+ var xh1=document.getElementById("X.name");
+ setTimeout(function (){
+  // xh1.innerText=obj1.name;
+   xh1.innerHTML ="<i>Lê Anh Thư</i>";
+   xh1.style.color="red";
+   xh1.style.backgroundColor="Orange";
+ },3000);
+
+
+</script>
+</body>
+</html>

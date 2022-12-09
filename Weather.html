@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weather</title>
+  <link rel="stylesheet" href="css/layout.css"/>
+</head>
+<body>
+<section class="section main">
+  <div class="container">
+    <h1 id="cityname">Tên thành phố</h1>
+    <h2><span id="nd">35</span><sup>o</sup>C</h2>
+    <h3>Độ ẩm:...</h3>
+    <h3>Áp suất:...</h3>
+    <p id="ds">Trời hôm nay nhiều mây.</p>
+    <p><img src="#" id="icon"/></p>
+  </div>
+</section>
+<script type="text/javascript">
+  // Step 1: GET DATA FROM WEB API
+  var xhttp = new XMLHttpRequest();
+  xhttp.onload = function (){
+    // Step 2: Transfer to js object
+    var result = this.responseText;
+    var data = JSON.parse(result);
+    // end step 2
+    // Step 3: using data
+    var city = data.name;
+    var ctn = document.getElementById("cityname");
+    ctn.innerText = city;
+    var temp = data.main.temp;
+    var nd = document.getElementById("nd");
+    nd.innerText = temp;
+
+    var weather = data.weather; // array;
+    var str = "";
+    var ic = "";
+    for(var i=0;i<weather.length;i++){
+      str += weather[i].description;
+      ic = weather[i].icon;
+    }
+    document.getElementById("ds").innerText = str;
+
+    var src = `https://openweathermap.org/img/wn/${ic}@2x.png`;
+    document.getElementById("icon").src = src;
+
+  }
+  xhttp.open("GET","https://api.openweathermap.org/data/2.5/weather?q=Hanoi,vietnam&appid=09a71427c59d38d6a34f89b47d75975c&units=metric");
+  xhttp.send();
+</script>
+</body>
+</html>

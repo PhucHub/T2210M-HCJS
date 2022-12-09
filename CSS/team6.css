@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100&family=Roboto:wght@300;400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.card-img-top{
+    height: 140px;
+}
+.card{
+    width: 250px;
+    height: 350px;
+    margin-left: 20px;
+}
+.row{
+    margin-left: 300px;
+    margin-bottom: 250px;
+}
+.table{
+ margin-top:-700px;
+}
+.header{
+    text-align:center;
+    font-family: 'Roboto';
+}
+.breadcrumb{
+    background-color: rgba(128, 128, 128, 0.13);
+    font-family: 'Roboto', sans-serif;
+    padding: 8px;
+}
+.Home{
+    color: rgba(255, 0, 0, 0.79);
+}
+#product{
+
+}

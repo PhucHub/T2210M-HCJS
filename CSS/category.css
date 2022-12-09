@@ -1,9 +1,10 @@
 h1{
     text-align:center;
     float: initial;
-    font-size: 25px;
-    font-family: "Helvetica Neue" ;
-    line-height: 1.42857143;
+    font-size: 35px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.4;
+
 }
 body{
     line-height: 1;
@@ -12,21 +13,70 @@ body{
 #category{
     font-family: Arial;
     float: left;
-    text-align: left;
+    text-align: right;
   margin-left: 70px;
 font-size: 12px;
-    width: 200px;
-
+    width: 300px;
+  line-height: 1em;
 }
 #Filterby{
     font-family: Arial;
     float: left;
-    text-align: left;
+    text-align: right;
     margin-left: 70px;
     font-size: 12px;
-  width: 250px;
-
+  width: 300px;
+  line-height: 1em;
 }
 h2{
    text-align: left;
+}
+#img1 {
+    width: 220px;
+    max-width: 70%;
+    margin-left: 330px;
+    margin-top: -500px;
+    line-height: 15px;
+    text-overflow: ellipsis;
+
+
+}
+th, td {
+    padding: 15px;
+    text-align: left;
+
+}
+table {
+    border-collapse: collapse;
+}
+#img2{
+    width: 220px;
+    max-width: 70%;
+    margin-left: 610px;
+    margin-top: -200px;
+    line-height: 15px;
+    text-overflow: ellipsis;
+}
+.Tieu_de{
+    white-space: nowrap;
+    width: 250px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+#img3{
+    width: 220px;
+    max-width: 70%;
+    margin-left: 880px;
+    margin-top: -200px;
+    line-height: 15px;
+    text-overflow: ellipsis;
+}
+#img4{
+    width: 220px;
+    max-width: 70%;
+    margin-left: 330px;
+    margin-top:  80px;
+    line-height: 15px;
+    text-overflow: ellipsis;
 }

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather2</title>
+  <link rel="stylesheet" href="CSS/Weather2.css"/>
+</head>
+<body>
+<section class="section main">
+  <div class="container1">
+    <p id="ngay">date</p>
+    <h2><span id="nd">35</span><sup>o</sup>C</h2>
+    <p id="cld">Cloud</p>
+    <p id="gio">hour</p>
+    <p><img src ="#" id="icon"/></p>
+  </div>
+  <div class="container2">
+    <p id="ngay">date</p>
+    <h2><span id="nd">35</span><sup>o</sup>C</h2>
+    <p id="cld">Cloud</p>
+    <p id="gio">hour</p>
+    <p><img src ="#" id="icon"/></p>
+  </div>
+  <div class="container3">
+    <p id="ngay">date</p>
+    <h2><span id="nd">35</span><sup>o</sup>C</h2>
+    <p id="cld">Cloud</p>
+    <p id="gio">hour</p>
+    <p><img src ="#" id="icon"/></p>
+  </div>
+  <div class="container4">
+    <p id="ngay">date</p>
+    <h2><span id="nd">35</span><sup>o</sup>C</h2>
+    <p id="cld">Cloud</p>
+    <p id="gio">hour</p>
+    <p><img src ="#" id="icon"/></p>
+  </div>
+  <div class="container5">
+    <p id="ngay">date</p>
+    <h2><span id="nd">35</span><sup>o</sup>C</h2>
+    <p id="cld">Cloud</p>
+    <p id="gio">hour</p>
+    <p><img src ="#" id="icon"/></p>
+  </div>
+  <div class="container6">
+    <p id="ngay">date</p>
+    <h2><span id="nd">35</span><sup>o</sup>C</h2>
+    <p id="cld">Cloud</p>
+    <p id="gio">hour</p>
+    <p><img src ="#" id="icon"/></p>
+  </div>
+  <div class="container7">
+    <p id="ngay">date</p>
+    <h2><span id="nd">35</span><sup>o</sup>C</h2>
+    <p id="cld">Cloud</p>
+    <p id="gio">hour</p>
+    <p><img src ="#" id="icon"/></p>
+  </div>
+  <div class="container8">
+    <p id="ngay">date</p>
+    <h2><span id="nd">35</span><sup>o</sup>C</h2>
+    <p id="cld">Cloud</p>
+    <p id="gio">hour</p>
+    <p><img src ="#" id="icon"/></p>
+  </div>
+  <div class="container9">
+    <p id="ngay">date</p>
+    <h2><span id="nd">35</span><sup>o</sup>C</h2>
+    <p id="cld">Cloud</p>
+    <p id="gio">hour</p>
+    <p><img src ="#" id="icon"/></p>
+  </div>
+  <div class="container10">
+    <p id="ngay">date</p>
+    <h2><span id="nd">35</span><sup>o</sup>C</h2>
+    <p id="cld">Cloud</p>
+    <p id="gio">hour</p>
+    <p><img src ="#" id="icon"/></p>
+  </div>
+  <div class="container11">
+    <p id="ngay">date</p>
+    <h2><span id="nd">35</span><sup>o</sup>C</h2>
+    <p id="cld">Cloud</p>
+    <p id="gio">hour</p>
+    <p><img src ="#" id="icon"/></p>
+  </div>
+  <div class="container12">
+    <p id="ngay">date</p>
+    <h2><span id="nd">35</span><sup>o</sup>C</h2>
+    <p id="cld">Cloud</p>
+    <p id="gio">hour</p>
+    <p><img src ="#" id="icon"/></p>
+  </div>
+  <div class="container13">
+    <p id="ngay">date</p>
+    <h2><span id="nd">35</span><sup>o</sup>C</h2>
+    <p id="cld">Cloud</p>
+    <p id="gio">hour</p>
+    <p><img src ="#" id="icon"/></p>
+  </div>
+  <div class="container14">
+    <p id="ngay">date</p>
+    <h2><span id="nd">35</span><sup>o</sup>C</h2>
+    <p id="cld">Cloud</p>
+    <p id="gio">hour</p>
+    <p><img src ="#" id="icon"/></p>
+  </div>
+  <div class="container15">
+    <p id="ngay">date</p>
+    <h2><span id="nd">35</span><sup>o</sup>C</h2>
+    <p id="cld">Cloud</p>
+    <p id="gio">hour</p>
+    <p><img src ="#" id="icon"/></p>
+  </div>
+  <div class="container16">
+    <p id="ngay">date</p>
+    <h2><span id="nd">35</span><sup>o</sup>C</h2>
+    <p id="cld">Cloud</p>
+    <p id="gio">hour</p>
+    <p><img src ="#" id="icon"/></p>
+  </div>
+</section>
+
+
+<script type="text/javascript">
+  var xhttp = new XMLHttpRequest();
+  xhttp.onload = function (){
+    var result = this.responseText;
+    var data =JSON.parse(result);
+
+    var date=data.dt_txt;
+
+  }
+  xhttp.open("GET","http://api.openweathermap.org/data/2.5/forecast?q=Hanoi,vietnam&appid=09a71427c59d38d6a34f89b47d75975c&units=metric");
+  xhttp.send();
+</script>
+</body>
+</html>

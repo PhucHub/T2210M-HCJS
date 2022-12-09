@@ -1,0 +1,15 @@
+body{
+ background-image: url("../images/sky-4237062__340.jpg");
+    background-size: cover;
+    color: #ffffff;
+}
+.weather{
+    background-color: #2c303450;
+    height: 165px;
+}
+.weather h4{
+  font-size: 20px;
+}
+.weather img{
+    transform: translate(140px,-120px);
+}

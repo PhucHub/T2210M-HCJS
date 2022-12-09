@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weather3</title>
+</head>
+<body>
+<section class="section main">
+  <div class="container">
+    <input type="text" id="select sity"value="Ha Noi" placeholder="Enter city.." >
+    <button type="button" onclick="currentWeather()">OK</button>
+    <select name="city"id="select city" onchange="currentWeather()">
+      <option value="hanoi">Ha Noi</option>
+      <option value="saigon">TP HCM</option>
+      <option value="london">London</option>
+      <option value="new york">New York</option>
+    </select>
+    <h1 id="cityname">Tên thành phố</h1>
+    <h2><span id="nd">35</span><sup>o</sup>C</h2>
+    <h3 id="da">Độ ẩm...</h3>
+    <h3 id="as">Áp suất...</h3>
+    <p id="cloud">Trời hôm nay nhiều mây</p>
+    <p><img src ="#" id="icon"/></p>
+  </div>
+
+</section>
+<script type="text/javascript">
+  var xhttp = new XMLHttpRequest();
+  xhttp.onload = function () {
+    var result = this.responseText;
+    var data = JSON.parse(result);
+    var city = data.name;
+    var ctn = document.getElementById("cityname");
+    ctn.innerText = city;
+    console.log(city);
+    var temp = data.main.temp;
+    var nd = document.getElementById("nd");
+    nd.innerText = temp;
+    console.log(temp);
+    var humidity = data.main.humidity;
+    var da = document.getElementById("da");
+    da.innerText = humidity;
+    console.log(humidity);
+    var pressure = data.main.pressure;
+    var as = document.getElementById("as");
+    as.innerText = pressure;
+    console.log(pressure);
+
+    var weather = data.weather;
+    var str = "";
+    var ic = "";
+    for (var i = 0; i < weather.length; i++) {
+      str += weather[i].description;
+      ic = weather[i].icon;
+    }
+    document.getElementById("cloud").innerText = str;
+    console.log(str);
+    var src = `https://openweathermap.org/img/wn/${ic}@2x.png`;
+    document.getElementById("icon").src = src;
+  }
+  xhttp.open("GET","https://api.openweathermap.org/data/2.5/weather?q=Hanoi,vietnam&appid=09a71427c59d38d6a34f89b47d75975c&units=metric");
+  xhttp.send();
+
+
+
+
+</script>
+</body>
+</html>

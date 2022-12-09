@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS 3</title>
+</head>
+<body>
+<button onclick="usersclick()"
+        onmouseenter="usersmouseIn()"
+        onmouseleave="usersmouseOut()"
+>Click me</button>
+
+<input onkeyup="keyUp()"
+       onkeydown="keyDown()" id="ips" placeholder="Search.." type="text" name="search"/>
+<select id="sl" name="city"  onchange="change()">
+        <option value="hn">HN</option>
+        <option value="sg">SG</option>
+        <option value="dn">DN</option>
+</select>
+<span id="city">HN</span>
+<script type="text/javascript">
+    var ips =document.getElementById("ips");
+    var sl=document.getElementById("sl");
+    var ct=document.getElementById("city");
+    function keyDown(){
+        console.log("Key down..."+ips.value);
+    }
+    function keyUp(){
+        console.log("Key up..."+ips.value);
+    }
+    function change(){
+      //  console.log("Change..."+sl.value);
+       ct.innerText=sl.value;
+    }
+  function usersclick(){
+    console.log("Bam vao day de tai game");
+  }
+  function usersmouseIn(){
+      console.log("Mouse in ...");
+  }
+  function usersmouseOut(){
+      console.log("Mouse out ...");
+  }
+
+</script>
+</body>
+</html>
+JSON
+API
+
+
